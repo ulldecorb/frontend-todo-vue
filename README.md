@@ -1,5 +1,5 @@
 # frontend-todo-vue
-Javascript Todo app (complete CRUD) on VUE
+Javascript Todo app (complete CRUD) on VUE 2
 
 ## SETUP
 ```
