@@ -3,9 +3,9 @@
         <input type="checkbox" 
         v-bind:checked="todo.completed ? 'checked' : ''"
         v-on:change="checkTodo">
-        <input type="text">
+        <input type="text" v-bind:value="todo.task">
         {{todo.task}}
-        <button>DELETE</button>
+        <button @click="$emit('delete-task', todo.id)">DELETE</button>
 </li>
 </template>
 <script>
