@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Todo List</h1>
+    <TodoList v-bind:todos="copyTodos" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodoList from './components/TodoList.vue'
+// import TodoItem from './components/TodoItem.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TodoList
+  }, 
+  data() {
+    return {
+      todos: 
+    [
+      {id: '1', task: 'Create VUE app', completed: false},
+      {id: '2', task: 'Create todo components', completed: false},
+      {id: '3', task: 'Test app', completed: false},
+    ],
+    copyTodos: []
+    }
+  },
+  created(){
+    this.copyTodos = [...this.todos];
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
