@@ -1,5 +1,5 @@
 <template>
-<li>
+<li class="todo" v-bind:class="{completed: todo.completed}">
         <input type="checkbox" v-bind:checked="todo.completed ? 'checked' : ''">
         <input type="text">
         {{todo.task}}
@@ -13,5 +13,7 @@ export default {
 }
 </script>
 <style scoped>
-
+.completed {
+    text-decoration: line-through;
+}
 </style>
