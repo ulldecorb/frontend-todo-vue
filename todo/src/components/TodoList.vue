@@ -1,7 +1,7 @@
 <template>
 <div>
   <ol v-bind:key="todo.id" v-for="todo in todos">
-    <TodoItem v-bind:todo="todo" />
+    <TodoItem v-bind:todo="todo" v-on:delete-task="$emit('delete-task', todo.id)"/>
   </ol>
 </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Todo List</h1>
-    <TodoList v-bind:todos="copyTodos" />
+    <TodoList v-bind:todos="copyTodos" v-on:delete-task="deleteTask" />
   </div>
 </template>
 
@@ -13,7 +13,13 @@ export default {
   name: 'App',
   components: {
     TodoList
-  }, 
+  },
+  methods: {
+    deleteTask(id) {
+      this.todos = this.todos.filter(todo => todo.id !== id);
+      this.copyTodos = [...this.todos];
+    }
+  },
   data() {
     return {
       todos: 
