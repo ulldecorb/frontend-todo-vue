@@ -18,7 +18,7 @@ export default {
     return {
       todos: 
     [
-      {id: '1', task: 'Create VUE app', completed: false},
+      {id: '1', task: 'Create VUE app', completed: true},
       {id: '2', task: 'Create todo components', completed: false},
       {id: '3', task: 'Test app', completed: false},
     ],
