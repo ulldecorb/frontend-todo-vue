@@ -2,6 +2,7 @@
   <div id="app">
     <h1>Todo List</h1>
     <TodoList v-bind:todos="copyTodos" v-on:delete-task="deleteTask" />
+    <Info v-bind:todos="copyTodos" />
     <AddTodo v-on:add-todo="addTodo" />
   </div>
 </template>
@@ -9,12 +10,12 @@
 <script>
 import TodoList from './components/TodoList/TodoList.vue'
 import AddTodo from './components/AddTodo/AddTodo.vue';
-// import TodoItem from './components/TodoItem.vue'
+import Info from './components/Info/Info.vue'
 
 export default {
   name: 'App',
   components: {
-    TodoList, AddTodo
+    TodoList, AddTodo, Info
   },
   methods: {
     deleteTask(id) {
@@ -22,7 +23,8 @@ export default {
       this.copyTodos = [...this.todos];
     },
     addTodo(todo){
-      this.copyTodos = [...this.todos, todo];
+      this.todos = [...this.todos, todo];
+      this.copyTodos = [...this.todos];
     }
   },
   data() {
