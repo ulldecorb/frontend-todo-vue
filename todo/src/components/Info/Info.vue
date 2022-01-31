@@ -25,6 +25,4 @@ export default {
     }
 }
 </script>
-<style lang="css" src="./info.css" scoped>
-
-</style>
+<style lang="css" src="./info.css" scoped></style>
