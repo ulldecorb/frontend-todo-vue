@@ -34,7 +34,7 @@ export default {
       {
         id: '5889190e-d1e0-41c1-8f70-4a5f0ba019b7', 
         task: 'Create VUE app', 
-        completed: true},
+        completed: false},
       {
         id: 'e5dd43e5-e297-4bfe-9fe7-1a28919115c4', 
         task: 'Create todo components', 
@@ -44,7 +44,7 @@ export default {
         task: 'Test app', 
         completed: false},
     ],
-    copyTodos: []
+    copyTodos: [],
     }
   },
   created(){
@@ -52,6 +52,4 @@ export default {
   }
 }
 </script>
-
-<style>
-</style>
+<style></style>
