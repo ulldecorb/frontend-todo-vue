@@ -1,6 +1,6 @@
 <template>
 <div>
-  <ol v-bind:key="todo.id" v-for="todo in todos">
+  <ol class="list__box" v-bind:key="todo.id" v-for="todo in todos">
     <TodoItem v-bind:todo="todo" v-on:delete-task="$emit('delete-task', todo.id)"/>
   </ol>
 </div>
@@ -16,4 +16,4 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="css" src="./todolist.css" scoped></style>
