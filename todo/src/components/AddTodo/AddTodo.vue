@@ -9,7 +9,7 @@
             type="button"
             class="add-task-box__handle-add-button"
             data-testid="addButton"
-            @click="$emit('addTodo', newTodo)"
+            @click="addTodo"
           >
             <i class="fas fa-plus-circle fa-2x" />
           </button>
