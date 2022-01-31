@@ -1,3 +1,6 @@
-div {
-    color:red
+@import '../../style/mixins';
+@import '../../style/color';
+
+span {
+    color:$dark-text
 }
