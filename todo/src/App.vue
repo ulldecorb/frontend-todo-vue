@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <h1>Todo List</h1>
+  <div class="list">
+    <h1 class="list__title">Todo List</h1>
     <TodoList v-bind:todos="copyTodos" v-on:delete-task="deleteTask" />
     <Info v-bind:todos="copyTodos" />
     <AddTodo v-on:add-todo="addTodo" />
@@ -52,4 +52,4 @@ export default {
   }
 }
 </script>
-<style></style>
+<style lang="css" src="./style/app.css"></style>

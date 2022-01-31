@@ -1,7 +1,10 @@
 <template>
     <div>
-        <form @submit="addTodo">
-            <input type="text" v-model="newTask">
+        <form class="controls__add-task-box" @submit="addTodo">
+            <input type="text" v-model="newTask"
+            placeholder="Add new task"
+            autoComplete="off"
+            maxLength="35">
         </form>
     </div>
 </template>
