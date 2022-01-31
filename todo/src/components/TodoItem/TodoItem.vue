@@ -19,7 +19,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang="css" src="./todoItem.css" scoped>
 .completed {
     text-decoration: line-through;
 }
