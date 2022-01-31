@@ -10,17 +10,17 @@ body {
     background-color: $background-color;
     background-image: 
     repeating-linear-gradient(90deg, transparent, transparent 50px,
-        rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px,
-        rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px,
-        rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
-    repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px,
-        rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px,
-        rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px,
-        rgba(255, 206, 0, 0.25) 166px),
-    repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px,
-        rgba(143, 77, 63, 0.25) 10px),
-    repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px,
-        rgba(143, 77, 63, 0.25) 10px);
+        $backgroundGridColor1 50px, $backgroundGridColor1 56px, transparent 56px, transparent 63px,
+        $backgroundGridColor1 63px, $backgroundGridColor1 69px, transparent 69px, transparent 116px,
+        $backgroundGridColor2 116px, $backgroundGridColor2 166px),
+    repeating-linear-gradient(0deg, transparent, transparent 50px, $backgroundGridColor1 50px,
+        $backgroundGridColor1 56px, transparent 56px, transparent 63px, $backgroundGridColor1 63px,
+        $backgroundGridColor1 69px, transparent 69px, transparent 116px, $backgroundGridColor2 116px,
+        $backgroundGridColor2 166px),
+    repeating-linear-gradient(-45deg, transparent, transparent 5px, $backgroundGridColor3 5px,
+        $backgroundGridColor3 10px),
+    repeating-linear-gradient(45deg, transparent, transparent 5px, $backgroundGridColor3 5px,
+        $backgroundGridColor3 10px);
 }
 
 .list {
@@ -46,48 +46,7 @@ body {
         margin-bottom: 2vh;
         @include flex(column, center, center);
 
-        .controls__add-task-box {
-            margin-top: 1.5vh;            
-            width: 100%;
-            @include flex(row, center, center);
-            
-            .add-task-box {
-                                
-                &__input {
-                    color: $dark-text;
-                    width: 60%;
-                    height: 3vh;
-                    border: none;
-                    border-radius: 2vh;
-                    padding: 0.8vh 0.8vw;
-                    &::placeholder {
-                        color: $light-text-focus;
-                    }
-
-                    &:focus {
-                        outline:2px solid $light-text-focus;
-                    }
-                }
-                
-                &__handle-add-button {
-                    color: $icon-color;
-                    width: 3vh;
-                    height: 3vh;
-                    border-radius: 50%;
-                    @include flex(row, center, center);
-                    margin: 0 1vw;
-                    border: none;
-                    cursor: pointer;
-
-                    &:hover {
-                        color: $light-text;
-                        box-shadow: 0 0 8px $icon-color;
-                        background-color: $icon-color;
-
-                    }
-                }
-            }
-        }
+        
 
         .controls__info {
             width: 100%;
